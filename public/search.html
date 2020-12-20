@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table {
+	border-collapse: collapse;
+	border:3px groove #4B4B4B;
+	width: 100%;
+	table-layout:fixed;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+    	text-overflow: ellipsis; 
+    	word-wrap: break-word;
+}
+
+tr:nth-child(odd) {
+	background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+	background-color: #eeeeee;
+}
+
+#form-wrapper {
+	padding-top: 50px;
+	width: 500px;
+	display: inline-block;
+	background-image: url("./images/search-background.jpg");
+	background-repeat: no-repeat;
+	background-position:fixed;
+	background-position: -70% -100%;
+}
+
+#form {
+	width: 100%;
+}
+
+#form_header {
+	font-size: 2.8rem;
+}
+
+#form_text_field {
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff;
+}
+
+#editDiv {
+  	display: none;
+  	position: fixed;
+  	z-index: 1;
+  	padding-top: 300px;
+	top: 0;
+	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background-color: rgba(0,0,0,0.4);
+}
+
+#editTable {
+	border: none;
+}
+
+#editWindow {
+ 	background-color: #ffffff;
+	border:3px groove #4B4B4B;
+  	margin: auto;
+  	padding: 20px;
+  	width: 80%;
+}
+
+.fields {
+	width: 100%;
+	box-sizing:border-box;
+}
+
+#content {
+	width: 90%;
+		min-width: 1024px;
+}
+
+</style>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<div id="navigation">
+	<div id="nav-content">
+		<nav id="nav_left">
+			<ul id="nav_buttons">
+				<li>Kickstarter Dataset</li>
+			</ul>
+		</nav>
+		<nav id="nav_middle">
+			<ul id="nav_buttons">
+				<li id="home"><a href="/">Home</a></li>
+  				<li id="search"><a href="search">Search</a></li>
+  				<li id="insert"><a href="insert">Insert</a></li>
+				<li id="analytics"><a href="analytics">Analytics</a></li>
+			</ul>
+		</nav>
+		<nav id="nav_right">
+			<ul id="nav_buttons">
+				<li id="backup"><a href="backup">Backup</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div id="content">
+	<section>
+	<div id="form-wrapper">
+	<div id="form">
+		<div id="form_text_field" style="text-align:center;">
+			<p id="form_header">Search Data</p>
+			<select id="input_category" class="fields" onChange="search.getSearchValues(this.value)"></select>
+			<div id ="valueSection">
+
+			</div>
+		<div>
+		<div style="text-align:center;padding-top:30px;padding-bottom:30px;">
+			<input type="button" id="search" onclick="search.searchTable()" value="Search Database">
+		</div>
+	</div>
+	</div>
+	</section>
+	<section>
+		<div id="editDiv">
+			<div id="editWindow" style="text-align:center;">
+				<h2 align="center">Edit Row</h2>
+				<table id="editTable">
+				</table>
+				<br><input type="button" id="edit" onclick="search.submitEdit()" value="Edit">
+			</div>
+		</div>
+		<p id='parseResults' style="text-align:center;"></p>
+		<div id='table' style="padding-left:30px;padding-right:30px;padding-top:15px;padding-bottom:50px;">
+		</div>
+	</section>
+</div>
+<div id="bottom-panel">
+</div>
+</body>
+<script src="/script/search.js"></script>
+</html>

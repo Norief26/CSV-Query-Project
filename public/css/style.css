@@ -1,0 +1,137 @@
+html {
+	font-size: 62.5%;
+	margin: auto;
+	align: center;
+	height:100%;
+}
+
+body {
+	font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+	background-color: #000000;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation {
+	top: 0;
+	padding: 0;
+	font-size: 1.5rem;
+	display: table;
+	width: 100%;
+	opacity: 0.8;
+	background-color: #1a1a1c;
+	max-height: 44px;
+	position: fixed;
+	padding-top: 10px;
+	border-bottom: 1px solid #4B4B4B;
+}
+
+#nav-content {
+	min-width: 1024px;
+	max-width: 1024px;
+	margin: auto;
+}
+
+#nav_left {
+	float: left;
+	width: 23%;
+	font-weight: 900;
+	text-align: center;
+	color: #f6f6f6;
+	vertical-align: middle;
+	line-height: 44px;
+}
+
+#nav_middle {
+	float: left;
+	width: 52%;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 44px;
+	border-left: 1px solid #4B4B4B;
+	border-right: 1px solid #4B4B4B;
+}
+
+#nav_right {
+	float: left;
+	width: 23%;
+	font-weight: 900;
+	vertical-align: middle;
+	line-height: 44px;
+	text-align: center;
+}
+
+#content {
+	margin: auto;
+	height: 80%;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 6rem;
+}
+
+#bottom-of-content {
+	padding-top: 650px;
+	border-bottom: 1px solid #4B4B4B;
+}
+
+#bottom-panel {
+	width: 100%;
+	height: 44px;
+	bottom: 0;
+	opacity: 0.8;
+	position: fixed;
+	background-color: #1a1a1c;
+	border-top: 1px solid #4B4B4B;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	display: inline;
+}
+
+li {
+	position: relative;
+	padding-bottom: 10px;
+}
+
+li a {
+ 	color: #ececec;
+ 	padding: 16px;
+ 	text-decoration: none;
+}
+
+a:after {
+	bottom: 0;
+	content: "";
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #ffffff;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+a:hover:after { 
+	width: 100%; 
+	left: 0;
+}
+
+
+#form {
+	width: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #1a1a1c;
+	border-style: solid;
+	border-color: #000000;
+	border-radius: 25px;
+	border-width: 2px;
+	opacity: 0.8;
+}

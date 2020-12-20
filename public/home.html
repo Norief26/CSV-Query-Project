@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+#home-image {
+	padding-top: 100px;
+	width: 60%;
+	float: left;
+}
+
+#dataset-chooser {
+	padding-top: 250px;
+	width: 40%;
+	float: right;
+}
+
+#content {
+	min-width: 1024px;
+	max-width: 1024px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="navigation">
+	<div id="nav-content">
+		<nav id="nav_left">
+			<ul id="nav_buttons">
+				<li>Kickstarter Dataset</li>
+			</ul>
+		</nav>
+		<nav id="nav_middle">
+			<ul id="nav_buttons">
+				<li id="home"><a href="/">Home</a></li>
+  				<li id="search"><a href="search">Search</a></li>
+  				<li id="insert"><a href="insert">Insert</a></li>
+				<li id="analytics"><a href="analytics">Analytics</a></li>
+			</ul>
+		</nav>
+		<nav id="nav_right">
+			<ul id="nav_buttons">
+				<li id="backup"><a href="backup">Backup</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div id="content">
+	<div id="home-image">
+		<img src="./images/home-background.jpg" style="height:400px;">
+	</div>
+	<div id="dataset-chooser">
+		<h3 style="color: #ececec;">Choose a Dataset:</h3>
+		<select id="dataset-list" onChange="home.initDB(this.value)">
+		</select>
+	</div>
+	<div id="bottom-of-content">
+	</div>
+	</div>
+</div>
+<div id="bottom-panel">
+</div>
+</body>
+<script src="/script/home.js"></script>
+</html>

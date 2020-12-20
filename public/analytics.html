@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<style>
+#graphContent {
+	overflow: auto;
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+canvas {
+	max-width: 800px;
+	display: block;
+}
+</style>
+
+<body>
+<div id="navigation">
+	<div id="nav-content">
+		<nav id="nav_left">
+			<ul id="nav_buttons">
+				<li>Kickstarter Dataset</li>
+			</ul>
+		</nav>
+		<nav id="nav_middle">
+			<ul id="nav_buttons">
+				<li id="home"><a href="/">Home</a></li>
+  				<li id="search"><a href="search">Search</a></li>
+  				<li id="insert"><a href="insert">Insert</a></li>
+				<li id="analytics"><a href="analytics">Analytics</a></li>
+			</ul>
+		</nav>
+		<nav id="nav_right">
+			<ul id="nav_buttons">
+				<li id="backup"><a href="backup">Backup</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div id="content" align="center">
+	<p>Choose a Analytic:</p>
+	<div id='selectDiv'>
+		<select id='selectList' onChange="analytics.getAnalytics(this.value)">
+		</select>
+	</div>
+	<div id="graphContent" align="center">
+
+	</div>
+</div>
+<div id="bottom-panel">
+</div>
+</body>
+<script src="/script/analytics.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+</html>
